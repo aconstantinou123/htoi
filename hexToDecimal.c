@@ -1,13 +1,12 @@
 #include <stdio.h>
-#include <string.h>
 
 int htoi(char []);
 
 int main()
 {
   long result1 ,result2, result3, result4, result5;
-  char string1[] = "0x100";
-  char string2[] = "100";
+  char string1[] = "0x11";
+  char string2[] = "11";
   char string3[] = "4B1B21C";
   char string4[] = "0x89dA4";
   char string5[] = "garbage";
@@ -28,8 +27,7 @@ int htoi(char s[])
 {
   int i, n, x, len;
   n = 0;
-  len = strlen(s);
-  for (i = 0; i <= (len - 1); ++i)
+  for (i = 0; s[i] != '\0'; ++i)
   {
     if((i == 0 && s[i] == '0') || (i == 1 && s[i] == 'x')){
       continue;
